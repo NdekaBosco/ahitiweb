@@ -90,10 +90,10 @@ const Home = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 pt-32">
           <div className="max-w-2xl animate-fade-in">
             <Badge className="mb-4 bg-ahiti-secondary text-ahiti-primary hover:bg-ahiti-secondary/90">
-              Ministry of Agriculture & Livestock Development
+              State Department of Livestock Development
             </Badge>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              Animal Health & Industry Training Institute
+              Animal Health & Industry Training Institute - Ndomba
             </h1>
             <p className="text-xl text-white/90 mb-8">
               Nurturing Excellence in Animal Health and Production Training Since 1984. 

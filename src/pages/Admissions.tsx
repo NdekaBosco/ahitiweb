@@ -13,9 +13,9 @@ const BASE_API = `${import.meta.env.VITE_BASE_API_URL}/apply`
 const Admissions = () => {
 
   const intakeDates = [
-    { program: 'Diploma in Animal Health and Production', intake: 'September 2026', deadline: 'July 31, 2026' },
-    { program: 'Certificate in Animal Health and Production', intake: 'September 2026', deadline: 'July 31, 2026' },
-    { program: 'Upgrading to Diploma', intake: 'September 2026', deadline: 'July 31, 2026' },
+    { program: 'Diploma in Animal Health and Production', intake: 'September 2026', deadline: 'To be updated' },
+    { program: 'Certificate in Animal Health and Production', intake: 'September 2026', deadline: 'To be updated' },
+    { program: 'Upgrading to Diploma', intake: 'September 2026', deadline: 'To be updated' },
     { program: 'Short Courses', intake: 'Monthly', deadline: '2 weeks before start' },
   ]
 
@@ -89,7 +89,7 @@ const Admissions = () => {
               <div className="text-ahiti-primary/80">Application Fee</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold text-ahiti-primary mb-2">July 31</div>
+              <div className="text-4xl font-bold text-ahiti-primary mb-2">To be updated</div>
               <div className="text-ahiti-primary/80">Application Deadline</div>
             </div>
           </div>

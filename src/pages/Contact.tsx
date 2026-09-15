@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { 
-  MapPin, Phone, Mail, Clock, Send, Facebook, Linkedin,
-  CheckCircle2
+  MapPin, Phone, Mail, Clock, Send, CheckCircle2
 } from 'lucide-react'
+import { socialLinks } from '@/lib/social'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
@@ -28,18 +28,14 @@ const Contact = () => {
       icon: Phone,
       title: 'Phone',
       details: [
-        'Main Office: +254 7XX XXX XXX',
-        'Admissions: +254 7XX XXX XXX',
-        'Registrar: +254 7XX XXX XXX'
+        '020 209 6540'
       ]
     },
     {
       icon: Mail,
       title: 'Email',
       details: [
-        'info@ahitindomba.go.ke',
-        'admissions@ahitindomba.go.ke',
-        'registrar@ahitindomba.go.ke'
+        'ahitindomba@kilimo.go.ke'
       ]
     },
     {
@@ -54,12 +50,12 @@ const Contact = () => {
   ]
 
   const departments = [
-    { name: 'Principal\'s Office', contact: 'principal@ahitindomba.go.ke' },
-    { name: 'Admissions Office', contact: 'admissions@ahitindomba.go.ke' },
-    { name: 'Registrar\'s Office', contact: 'registrar@ahitindomba.go.ke' },
-    { name: 'Academic Affairs', contact: 'academic@ahitindomba.go.ke' },
-    { name: 'Finance Office', contact: 'finance@ahitindomba.go.ke' },
-    { name: 'Student Affairs', contact: 'studentaffairs@ahitindomba.go.ke' },
+    { name: 'Principal\'s Office' },
+    { name: 'Admissions Office' },
+    { name: 'Registrar\'s Office' },
+    { name: 'Academic Affairs' },
+    { name: 'Finance Office' },
+    { name: 'Student Affairs' },
   ]
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -180,69 +176,47 @@ const Contact = () => {
 
             {/* Map & Additional Info */}
             <div className="space-y-8">
-              {/* Map Placeholder */}
+              {/* Map */}
               <div className="bg-white rounded-2xl p-8 shadow-lg">
                 <h3 className="text-xl font-bold text-ahiti-primary mb-4">Our Location</h3>
-                <div className="bg-gray-100 rounded-xl h-64 flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="w-12 h-12 text-ahiti-primary mx-auto mb-2" />
-                    <p className="text-gray-600">AHITI Ndomba Campus</p>
-                    <p className="text-gray-500 text-sm">Kirinyaga County, Kenya</p>
-                    <a 
-                      href="https://maps.google.com/?q=Kutus+Kirinyaga+Kenya" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center text-ahiti-primary hover:underline mt-2"
-                    >
-                      View on Google Maps
-                    </a>
-                  </div>
+                <div className="rounded-xl overflow-hidden h-80">
+                  <iframe
+                    title="AHITI Ndomba Kerugoya location"
+                    src="https://maps.google.com/maps?q=AHITI%20Ndomba%20Kerugoya&ll=-0.48626,37.272074&z=16&output=embed"
+                    className="w-full h-full border-0"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    allowFullScreen
+                  />
                 </div>
-              </div>
-
-              {/* Departments */}
-              <div className="bg-white rounded-2xl p-8 shadow-lg">
-                <h3 className="text-xl font-bold text-ahiti-primary mb-4">Department Contacts</h3>
-                <div className="space-y-3">
-                  {departments.map((dept, index) => (
-                    <div key={index} className="flex items-center justify-between py-2 border-b border-gray-100 last:border-0">
-                      <span className="text-gray-700">{dept.name}</span>
-                      <a 
-                        href={`mailto:${dept.contact}`}
-                        className="text-ahiti-primary text-sm hover:underline"
-                      >
-                        Email
-                      </a>
-                    </div>
-                  ))}
-                </div>
+                <a
+                  href="https://share.google/n6ik46v97Oxq7SdFO"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-ahiti-primary hover:underline mt-4"
+                >
+                  <MapPin className="w-4 h-4 mr-1" />
+                  View on Google Maps
+                </a>
               </div>
 
               {/* Social Media */}
               <div className="bg-ahiti-primary rounded-2xl p-8 text-white">
                 <h3 className="text-xl font-bold mb-4">Follow Us</h3>
                 <p className="text-white/80 mb-6">Stay connected with us on social media for the latest updates.</p>
-                <div className="flex space-x-4">
-                  <a 
-                    href="https://x.com/AhitiNdomba" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center hover:bg-ahiti-secondary hover:text-ahiti-primary transition-colors"
-                  >
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                  </a>
-                  <a 
-                    href="#" 
-                    className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center hover:bg-ahiti-secondary hover:text-ahiti-primary transition-colors"
-                  >
-                    <Facebook className="w-6 h-6" />
-                  </a>
-                  <a 
-                    href="#" 
-                    className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center hover:bg-ahiti-secondary hover:text-ahiti-primary transition-colors"
-                  >
-                    <Linkedin className="w-6 h-6" />
-                  </a>
+                <div className="flex flex-wrap gap-4">
+                  {socialLinks.map((social) => (
+                    <a
+                      key={social.name}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={social.name}
+                      className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center hover:bg-ahiti-secondary hover:text-ahiti-primary transition-colors"
+                    >
+                      {social.icon('w-6 h-6')}
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>
@@ -272,7 +246,7 @@ const Contact = () => {
               },
               {
                 q: 'When is the application deadline?',
-                a: 'Applications for the September 2026 intake close on July 31, 2026.'
+                a: 'The application deadline for the September 2026 intake is to be updated. Please check back soon.'
               },
               {
                 q: 'Do you offer accommodation?',

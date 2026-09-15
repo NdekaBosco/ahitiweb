@@ -33,22 +33,16 @@ const About = () => {
       image: '/images/IMG_0716-1@-1369504436.jpg'
     },
     {
-      name: 'Dr. Catherine Kihara',
-      title: 'Deputy Principal',
-      description: 'Overseeing academic programs and student welfare with expertise in veterinary sciences.',
-      image: '/images/IMG_0712@-1363690268.jpg'
-    },
-    {
-      name: 'Dr. Samuel Mwangi',
+      name: 'Mr. Stephen Gachege Ndia',
       title: 'Director of Studies',
       description: 'Coordinating curriculum development and ensuring quality education standards.',
-      image: '/images/IMG_0588@1362214849.jpg'
+      image: '/images/director-of-studies.jpeg'
     },
     {
-      name: 'Mrs. Jane Wanjiku',
+      name: 'Dr. Eunice Mungai',
       title: 'Registrar',
       description: 'Managing student admissions, records, and administrative operations.',
-      image: '/images/IMG_0712@-1363690268.jpg'
+      image: '/images/registrar.jpeg'
     }
   ]
 
@@ -199,19 +193,19 @@ const About = () => {
           </div>
 
           {/* Senior Leadership */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {leadership.map((leader, index) => (
               <div key={index} className="bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <div className="h-64 overflow-hidden">
                   <img
                     src={leader.image}
                     alt={leader.name}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold text-ahiti-primary mb-1">{leader.name}</h3>
-                  <p className="text-ahiti-secondary bg-ahiti-primary/10 px-3 py-1 rounded-full text-sm font-medium inline-block mb-3">
+                  <p className="text-white bg-ahiti-primary px-3 py-1 rounded-full text-sm font-semibold inline-block mb-3">
                     {leader.title}
                   </p>
                   <p className="text-gray-600 text-sm">{leader.description}</p>
