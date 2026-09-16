@@ -369,14 +369,14 @@ const Admissions = () => {
                 <Phone className="w-7 h-7 text-ahiti-secondary" />
               </div>
               <h3 className="font-bold text-white mb-2">Phone</h3>
-              <p className="text-white/70">+254 7XX XXX XXX</p>
+              <a href="tel:+254202096540" className="text-white/70 hover:text-ahiti-secondary transition-colors">020 209 6540</a>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
               <div className="w-14 h-14 bg-ahiti-secondary/20 rounded-xl flex items-center justify-center mx-auto mb-4">
                 <Mail className="w-7 h-7 text-ahiti-secondary" />
               </div>
               <h3 className="font-bold text-white mb-2">Email</h3>
-              <p className="text-white/70">admissions@ahitindomba.go.ke</p>
+              <a href="mailto:ahitindomba@kilimo.go.ke" className="text-white/70 hover:text-ahiti-secondary transition-colors break-all">ahitindomba@kilimo.go.ke</a>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
               <div className="w-14 h-14 bg-ahiti-secondary/20 rounded-xl flex items-center justify-center mx-auto mb-4">

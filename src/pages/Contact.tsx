@@ -182,7 +182,7 @@ const Contact = () => {
                 <div className="rounded-xl overflow-hidden h-80">
                   <iframe
                     title="AHITI Ndomba Kerugoya location"
-                    src="https://maps.google.com/maps?q=AHITI%20Ndomba%20Kerugoya&ll=-0.48626,37.272074&z=16&output=embed"
+                    src="https://maps.google.com/maps?q=-0.5827750,37.3379630&ll=-0.5827750,37.3379630&z=16&output=embed"
                     className="w-full h-full border-0"
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
@@ -190,7 +190,7 @@ const Contact = () => {
                   />
                 </div>
                 <a
-                  href="https://share.google/n6ik46v97Oxq7SdFO"
+                  href="https://www.google.com/maps?q=-0.5827750,37.3379630"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-ahiti-primary hover:underline mt-4"
